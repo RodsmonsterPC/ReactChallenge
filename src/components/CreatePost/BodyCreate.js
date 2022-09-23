@@ -1,6 +1,12 @@
+import { useState } from "react";
 import styles from "./CreatePost.module.scss";
 
 const BodyCreate = () => {
+  const [image, setImage] = useState();
+  const [title, setTitle] = useState();
+  const [tags, setTags] = useState();
+  const [text, setText] = useState();
+
   return (
     <div>
       <div className={`container-fluid ${styles.containerInputs}`}>
@@ -10,6 +16,7 @@ const BodyCreate = () => {
             <div className="" id="containerInputs">
               <div className={`${styles.addImage}`}>
                 <input
+                  onChange={(e) => setImage(e.target.value)}
                   type="text"
                   className={`${styles.postUrlImageInput} rounded`}
                   id="exampleInputEmail1"
@@ -20,6 +27,7 @@ const BodyCreate = () => {
 
               <div>
                 <input
+                  onChange={(e) => setTitle(e.target.value)}
                   type="text"
                   className={`${styles.postTitleInput}  fw-bold`}
                   id="exampleInputEmail1"
@@ -29,6 +37,7 @@ const BodyCreate = () => {
               </div>
               <div className="mb-3 mt-3">
                 <input
+                  onChange={(e) => setTags(e.target.value)}
                   type="text"
                   className={`${styles.postTagsInput}`}
                   id="exampleInputEmail1"
@@ -38,11 +47,12 @@ const BodyCreate = () => {
               </div>
             </div>
 
-            <div
+            <textarea
+              onChange={(e) => setText(e.target.value)}
               id="editor"
-              className={`${styles.postBodyInput}${styles.editor}`}
+              className={`${styles.postBodyInput}`}
               placeholder="Write your post content here..."
-            ></div>
+            ></textarea>
           </div>
         </div>
       </div>

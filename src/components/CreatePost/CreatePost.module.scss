@@ -3,6 +3,8 @@
     background-color: #FFFFFF;
     margin-top: 0% !important;
     margin-bottom: 0% !important;
+    display: flex;
+    justify-content: center;
 }
 .containerPost{
     
@@ -12,7 +14,7 @@
     margin-bottom:20px;
     width:100%;
 }
-.editor{
+#editor{
     // width:320px;
     height:250px;
 }
@@ -70,9 +72,13 @@
     height: 56px;
    min-width:320px;
    max-width: 100%;
+   display: flex;
+   justify-content: space-around;
 }
 .containerNav{
     max-width: 1200px !important;
+    display: flex;
+    justify-content: space-around;
 }
 
 .devTo{
@@ -117,3 +123,7 @@
             display:flex;
            }
       }
+
+.headerNav{
+    margin-bottom: 100px;
+}

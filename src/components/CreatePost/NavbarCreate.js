@@ -2,7 +2,7 @@ import styles from "./CreatePost.module.scss";
 import Devto from "./Images/dev_to_icon_136699.png";
 const NavbarCreate = () => {
   return (
-    <header>
+    <header className={styles.headerNav}>
       <nav className={`${styles.navbar} fixed-top border-bottom p-0 row`}>
         <div className={`container-fluid d-flex ${styles.containerNav}`}>
           <div className="d-flex align-items-center justify-content-md-start">
@@ -20,7 +20,7 @@ const NavbarCreate = () => {
             </li>
             <button
               type="button"
-              className={`${styles.btnClose}`}
+              className={`btn-close ${styles.btnClose}`}
               aria-label="Close"
             ></button>
           </div>
