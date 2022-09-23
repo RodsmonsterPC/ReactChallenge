@@ -1,0 +1,237 @@
+.principalContentPage2{
+    margin-top: 100px;
+}
+//Cambios de Bastian/
+
+.targetusr{
+    width: 50px;
+    height: 50px;
+    border-radius:1000px;
+}
+.follow2{
+    background-color: #3b49df !important;
+}
+
+
+.-border2{
+    position: relative; 
+    height: 32px;
+}
+// @media (max-width:1023px){
+//   .container-aside{
+    
+//   }
+// }
+.image-document{
+    position: relative;
+    top:-15px;
+}
+
+//////////////////
+.avatar_entry_2nd{
+    height: 40px;
+}
+.autorProperties{
+    line-height: 1;
+}
+
+.book_image{
+    max-width: 80%;
+}
+
+.textArea{
+    max-width: 80%;
+}
+
+.commentBox{
+    border: 1px rgb(238, 232, 232) solid;
+    border-radius: 15px;
+    padding: 15px;
+
+}
+
+.image-graph_2{
+    width: 80%;
+    height: auto;
+}
+
+//cambios de Bastian
+
+
+
+//////////////////    ASIDE
+$iconred: #DC1B26;
+  $iconblue: #44509E;
+  $icongreen: #199A6E;
+  body{
+    background-color: #F5F5F5;
+  }
+.asideIconBar{
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 250px;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+@media  (max-width:767px){
+  .asideIconBar{
+    display: flex;
+    position: fixed;
+    background-color: white;
+    flex-direction: row;
+    width: 100%;
+    height: 15%;
+    bottom:0px;
+    margin: 0px;
+  }
+}
+  .asideIconContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    width: 51px;
+    position: relative;
+    .checkBoxHider{
+      display: none;
+    }
+      .checkedLabel {
+            .asideIconDefault, .asideIconHover{
+                  width: 50px;
+                  height: 50px;
+                  position: absolute;
+                  border-radius: 50%;
+                  left: 0px;
+                  top: 0px;
+             }
+            .asideIconHover{
+                  opacity: 0;
+                  transition: .4s;
+             }
+             .bigring{
+                  width: 110px;
+                  height: 110px;
+                  position: absolute;
+                  opacity: 0;
+                  transition: .4s;
+                  align-self: center;
+                  left: -30px;
+                  top: -30px;
+             }
+            .asideIconChecked{
+              width: 40px;
+              height: 40px;
+              position: absolute;
+              left: 5px;
+              top: 5px;
+              transition: .4s;
+              border-radius: 50%;
+              opacity: 0;
+            }
+          }
+          &:hover{
+            .asideIconHover{
+            opacity: 1;
+          }}
+      }
+      .checkBoxHider:checked ~ .checkedLabel > {
+      .asideIconDefault, .asideIconHover{
+        display: none;
+      }
+      .asideIconChecked{
+        opacity: 1 ;
+        width: 50px;
+        height: 50px;
+        left: 0px;
+        top: 0px;
+      }
+      .bigring{
+        display: flex;
+        opacity: .6;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+}
+    #unicorn{
+      border-style: solid;
+      border-color: #199A6E;
+      border-width: 2px;
+    }
+    #heart{
+      border-style: solid;
+      border-color:#DC1B26;
+      border-width: 2px;
+    }
+    #save{
+      border-style: solid;
+      border-color:#44509E;
+      border-width: 2px;
+    }
+    .smallring{
+      display: none;
+    }
+    .asideCount{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 30px;
+    }
+
+
+
+
+
+//! Cambios generales Sebas 
+
+.dropstart .dropdown-menu[data-bs-popper] {
+  top: 150%;
+  right: 0%;
+  left: auto;
+  margin-top: 0;
+  margin-right: var(--bs-dropdown-spacer);
+}
+
+@media (min-width :768px) {
+  .contenedorsearch{
+      display: flex;
+  }
+}
+
+.contenedorsearch{ 
+  width: 400px !important;
+  height: 50px !important;
+  margin-top: 8px;
+  margin-left: 10px;
+ 
+}
+
+@media(min-width:768px){
+        
+  .leftAside2{
+      display: none;
+
+  }
+}
+
+
+.leftAside2{
+  height: 100%;
+  top:96px;
+}
+
+.post_urlImage_input{
+  border-color: white;
+}
+
+.post_title_input{
+  border-color: white;
+}
+
+.post_tags_input{
+  border: white;
+}
