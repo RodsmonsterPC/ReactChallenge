@@ -17,7 +17,7 @@ return(
                     <img src={profilePicture} className={style.avatarEntryTwo}/>
                 </div>
 
-                <div className="mx-4 autorProperties">
+                <div className={`mx-4 ${style.autorProperties}`}>
                     <form action="">
                         <textarea rows="rows" name="name" className={style.textArea}>Add to the disscussion</textarea>
                     </form>
@@ -33,7 +33,7 @@ return(
                     <img src={profilePicture} className={style.avatarEntryTwo}/>
                 </div>
 
-                <div className="mx-4 autorProperties">
+                <div className={`mx-4 ${style.autorProperties}`}>
 
                     <div className={style.commentBox}>
                         <p className="pt-3"> raddevus <span className="text-secondary"> Jun 15</span></p>
@@ -72,7 +72,7 @@ return(
                     <img src={profilePicture} className={style.avatarEntryTwo}/>
                 </div>
 
-                <div className="mx-4 autorProperties">
+                <div className={`mx-4 ${style.autorProperties}`}>
                     <div className={style.commentBox}>
 
                         <p class="pt-3"> Manuer Artero Anguita <span className="text-secondary"> Jun 16 - Edited on Jun 16</span></p>
@@ -99,7 +99,7 @@ return(
                     <img src={profilePicture} className={style.avatarEntryTwo}/>
                 </div>
 
-                <div className="mx-4 autorProperties">
+                <div className={`mx-4 ${style.autorProperties}`}>
                     <div className={style.commentBox}>
 
                         <p className="pt-3"> drsensor <span className="text-secondary"> Jun 15</span></p>
