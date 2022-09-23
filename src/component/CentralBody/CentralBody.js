@@ -27,7 +27,7 @@ return(
 
 
 
-            <div className="autor d-flex mx-4 pt-5">
+            {/* <div className="autor d-flex mx-4 pt-5">
 
                 <div>
                     <img src={profilePicture} className={style.avatarEntryTwo}/>
@@ -64,7 +64,7 @@ return(
 
                 </div>
 
-            </div>
+            </div> */}
 
 
             <div class="autor d-flex mx-4 pt-5">
