@@ -1,0 +1,15 @@
+.contenedorSearch{
+    width: 400px !important;
+    height: 50px !important;
+    margin-top: 8px;
+    margin-left: 10px;
+    display:none;
+}
+@media (min-width :768px) {
+    .contenedorSearch{
+        display: flex;
+    }
+}
+.inputGroupText{
+    background-color: white !important;
+}
