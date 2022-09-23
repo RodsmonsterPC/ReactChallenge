@@ -1,0 +1,156 @@
+.containerInputs{
+    padding:12px;
+    background-color: #FFFFFF;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+}
+
+.containerPost{
+    
+    background-color: #FFFFFF;
+}
+
+.postUrlImageInput{
+    border-color:#d6d6d7;
+    height: 40px;
+    width: 180px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left:14px;
+    padding-right: 14px;
+    border-width: 2px;
+    border: opacity($color: #000000);
+    
+  }
+
+  .postTitleInput{
+    border: 0;
+    width: 288px;
+    height:52px;
+  }
+
+  .postTagsInput{
+    border: 0;
+  }
+  .postBodyInput{
+    background-color:#FFFFFF ;
+  }
+  .btnCreatePost{
+    margin-bottom: 5px;
+}
+.btnDeletePost{
+    margin-bottom: 5px; 
+    background-color: #f9f9f9;
+    color: #000000;
+    border-color: #f9f9f9;
+}
+
+
+.postHolder{
+    
+        background-color: rgb(158, 158, 158);
+   
+}
+.container-nav{
+    max-width: 1200px !important;
+}
+.contenedorPost{
+    
+    background-color: #FFFFFF;
+}
+
+#editor{
+   
+    height:250px;
+}
+
+.navbar{
+    background-color: #f9f9f9;
+    position:sticky;
+    height: 56px;
+   min-width:320px;
+   max-width: 100%;
+}
+
+  
+  .postTitleInput::placeholder{
+    font-size: 30px;
+    color:#575757;
+  }
+  @media (min-width : 768px){
+    .postTitleInput{
+        width: 446.39px;
+    }
+    .postTitleInput::placeholder{
+        font-size: 40px;
+    }
+  }
+  
+  .ql-snow{
+    background-color: #f9f9f9 ;
+    border: 0 !important ;
+    // width: 350px !important;
+   
+  }
+  
+  .edit{
+    border:0;
+    background-color: #f9f9f9 ;
+    flex-direction: row;
+    display: flex;
+   font-family:'Times New Roman', Times, serifq;
+  }
+  .preview{
+    border:0;
+    background-color: #f9f9f9 ;
+  }
+  .elipses{
+    list-style-type: none;
+  }
+  .devTo{
+   display:none;
+  }
+
+  @media (min-width :768px){
+      .devTo{
+          display:flex;
+          position: relative;
+        }
+    }
+  .textCreate{
+    display:none;
+  }
+  @media (min-width :768px){
+    .textCreate{
+        display:flex;
+       }
+  }
+
+  .btn-close{
+    display:none;
+  }
+  @media (min-width :768px){
+    .btn-close{
+        display:flex;
+       }
+  }
+ .post_body_input{
+    border:0;
+    
+ }
+
+ .containerButtons{
+    position:fixed;
+    bottom:0px;
+    background-color:#f9f9f9;
+    width: 320px;
+
+}
+
+.addImage{
+    margin-bottom:20px;
+    width:100%;
+}
+.bottones-test{
+    margin-top: 20px;
+}
