@@ -23,7 +23,7 @@ import Twitter from "./MenuSections/Twitter"
 
 const Menu = () => {
   return (
-    <div className="offcanvas-body">
+    <div>
       <button
         className="navbar-toggler d-md-none border border-light"
         type=" button"
@@ -56,7 +56,7 @@ const Menu = () => {
         <FaceBook/>
         <Github/>
         <Instagram/>
-        <Twitch/>
+        {/* <Twitch/> */}
         <Twitter/>
       </div>
     </div>

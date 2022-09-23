@@ -4,7 +4,7 @@ import twitter from '../../images/Twitter.png'
 const Twitter = () => {
   return (
     <div className={`${styles.smallIcon} ${styles.tw}`}>
-      <img src={twitter} alt="image" />
+      <img src={twitter} alt="img" />
     </div>
   );
 };

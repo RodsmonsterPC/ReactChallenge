@@ -5,8 +5,8 @@ const Tags = () => {
   return (
     <div>
       <li className="nav-item d-flex align-items-center justify-content-start">
-        <img src={tagsImage} alt="image" />{" "}
-        <a className="nav-link active" aria-current="page" href="#">
+        <img src={tagsImage} alt="img" />{" "}
+        <a className="nav-link active" aria-current="page">
           Tags
         </a>
       </li>

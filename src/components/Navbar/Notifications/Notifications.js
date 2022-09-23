@@ -8,7 +8,7 @@ const Notifications = () => {
             <img
               className={`m-3 ${styles.bell}`}
               src={bell}
-              alt="image"
+              alt="img"
             />
           </a>
         </div>

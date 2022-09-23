@@ -5,7 +5,7 @@ import styles from '../MenuSections/menu.module.scss'
 const Instagram = () => {
   return (
     <div className={`${styles.smallIcon} ${styles.ig}`}>
-      <img src={instagram} alt="image" />
+      <img src={instagram} alt="img" />
     </div>
   );
 };

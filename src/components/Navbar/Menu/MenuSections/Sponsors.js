@@ -5,8 +5,8 @@ const Sponsors = () => {
   return (
     <div>
       <li className="nav-item  d-flex align-items-center justify-content-start">
-        <img src={sponsorImage} alt="image" />{" "}
-        <a className="nav-link active" aria-current="page" href="#">
+        <img src={sponsorImage} alt="img" />{" "}
+        <a className="nav-link active" aria-current="page" >
           Sponsors
         </a>
       </li>

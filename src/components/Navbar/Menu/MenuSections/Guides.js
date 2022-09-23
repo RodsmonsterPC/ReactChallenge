@@ -6,7 +6,7 @@ const Guides = () => {
     <div>
       <li className="nav-item  d-flex align-items-center justify-content-start">
         <img className={`${styles.guides}`} src={guidesImage} alt="" />{" "}
-        <a className="nav-link active" aria-current="page" href="#">
+        <a className="nav-link active" aria-current="page">
           Guides
         </a>
       </li>

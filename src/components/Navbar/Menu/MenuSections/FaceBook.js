@@ -5,7 +5,7 @@ import styles from '../MenuSections/menu.module.scss'
 const FaceBook = () => {
   return (
     <div className={`${styles.smallIcon} ${styles.fb}`}>
-      <img src={facebook} alt="image" />
+      <img src={facebook} alt="img" />
     </div>
   );
 };

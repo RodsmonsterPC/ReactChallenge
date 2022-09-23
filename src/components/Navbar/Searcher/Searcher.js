@@ -18,7 +18,7 @@ const Searcher = () => {
         <img
           className=" d-none d-md-block"
           src={search}
-          alt="image"
+          alt="img"
         />
       </span>
     </div>

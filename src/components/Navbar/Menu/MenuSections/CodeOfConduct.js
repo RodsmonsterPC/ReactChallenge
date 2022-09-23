@@ -5,8 +5,8 @@ const CodeOfConduct = () => {
   return (
     <div>
       <li className="nav-item d-flex align-items-center justify-content-start">
-        <img src={Code} alt="" />
-        <a className="nav-link active" aria-current="page" href="#">
+        <img src={Code} alt="img" />
+        <a className="nav-link active" aria-current="page" >
           Code of Conduct
         </a>
       </li>

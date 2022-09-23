@@ -5,7 +5,7 @@ import styles from '../MenuSections/menu.module.scss'
 const Twitch = () => {
   return (
     <div className={`${styles.smallIcon} ${styles.dis}`}>
-      <img src={Twitch} alt="image" href="#" />
+      <img src={Twitch} alt="img" />
     </div>
   );
 };
