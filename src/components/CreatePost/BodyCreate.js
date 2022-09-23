@@ -1,12 +1,29 @@
 import { useState } from "react";
 import styles from "./CreatePost.module.scss";
+import { postPost } from "../../Services/post2";
+import { useNavigate } from "react-router-dom";
 
 const BodyCreate = () => {
   const [image, setImage] = useState();
   const [title, setTitle] = useState();
   const [tags, setTags] = useState();
   const [text, setText] = useState();
+  const navigate = useNavigate();
 
+  const handleSubmit = async () => {
+    const body = {
+      urlImage: image,
+      title: title,
+      tags: tags,
+      body: text,
+    };
+    try {
+      const newPost = await postPost(body);
+      navigate("/");
+    } catch {
+      alert("Error al guardar datos");
+    }
+  };
   return (
     <div>
       <div className={`container-fluid ${styles.containerInputs}`}>
@@ -58,6 +75,7 @@ const BodyCreate = () => {
       </div>
       <div className={`${styles.containerButtons}`}>
         <button
+          onClick={handleSubmit}
           type="button"
           className={`btn btn-primary ${styles.btnCreatePost} mt-2`}
         >

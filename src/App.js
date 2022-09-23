@@ -11,7 +11,7 @@ function App() {
       <IdContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/detailpost" element={<DetailPost />} />
+          <Route path="/detailpost/:postId" element={<DetailPost />} />
           <Route path="/editpost" element={<EditPost />} />
           <Route path="/createpost" element={<CreatePost />} />
         </Routes>

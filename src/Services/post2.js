@@ -9,3 +9,14 @@ export const getPostId = async (id) => {
   const data = await response.json();
   return data.post;
 };
+
+export const postPost = async (data) => {
+  const response = await fetch(`http://localhost:8080/post`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  const responseData = await response.json();
+  return responseData.user;
+};

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { getPost } from "../Services/post";
-import IdContext from "../components/context/idContext";
-import { useContext } from "react";
+import { getPost } from "../Services/post2";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
-  const { changeId } = useContext(IdContext);
 
   const [posts, setPosts] = useState();
   useEffect(() => {
@@ -20,8 +17,7 @@ const Home = () => {
   }
 
   const changePost = (id) => {
-    changeId(id);
-    navigate("/detailpost");
+    navigate(`/detailpost/${id}`);
   };
   return (
     <div>
