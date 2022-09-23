@@ -13,11 +13,11 @@ import Sponsors from "./MenuSections/Sponsors";
 import Tags from "./MenuSections/Tags";
 import TermsOfUse from "./MenuSections/TermsOfUse";
 import Video from "./MenuSections/Video";
-import FaceBook from "./MenuSections/Pages/FaceBook"
-import Github from "./MenuSections/Pages/Github"
-import Instagram from "./MenuSections/Pages/Instagram"
-import Twitch from "./MenuSections/Pages/Twitch"
-import Twitter from "./MenuSections/Pages/Twitter"
+import FaceBook from "./MenuSections/FaceBook"
+import Github from "./MenuSections/Github"
+import Instagram from "./MenuSections/Instagram"
+import Twitch from "./MenuSections/Twitch"
+import Twitter from "./MenuSections/Twitter"
 
 
 

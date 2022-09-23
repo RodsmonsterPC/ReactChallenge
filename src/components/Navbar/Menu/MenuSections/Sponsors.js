@@ -1,10 +1,11 @@
 import React from "react";
+import sponsorImage from '../../images/sponsors.png'
 
 const Sponsors = () => {
   return (
     <div>
       <li className="nav-item  d-flex align-items-center justify-content-start">
-        <img src="images/sponsors.png" alt="" />{" "}
+        <img src={sponsorImage} alt="image" />{" "}
         <a className="nav-link active" aria-current="page" href="#">
           Sponsors
         </a>

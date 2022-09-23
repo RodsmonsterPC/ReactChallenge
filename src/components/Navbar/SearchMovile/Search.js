@@ -1,13 +1,13 @@
 import React from "react";
-
+import searchIcon from '../images/search.png'
 const Search = () => {
   return (
     <div>
       <a href="#">
         <img
-          class="m-3"
-          src="./images/bell_simple_thin_icon_171966.png"
-          alt=""
+          className="m-3 p-1 d-md-none"
+          src={searchIcon}
+          alt="image"
         />
       </a>
     </div>

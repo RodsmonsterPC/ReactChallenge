@@ -1,6 +1,8 @@
+import styles from '../Profile/profile.module.scss'
+import profileimage from '../images/avatar_people_adult_man_icon_159129.png'
 const Profile = () => {
   return (
-    <div className="dropdown dropstart">
+    <div className={`dropdown dropstart ${styles.dropStart}`}>
       <a
         className=""
         id="dropdownMenuButton1"
@@ -10,11 +12,11 @@ const Profile = () => {
         {" "}
         <img
           className="border border-dark rounded-circle "
-          src="./images/avatar_people_adult_man_icon_159129.png"
-          alt=""
+          src={profileimage}
+          alt="image"
         />
       </a>
-      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <ul className={`dropdown-menu menu-position2 ${styles.menuDrop}`}aria-labelledby="dropdownMenuButton1">
         <li>
           <a className="dropdown-item" href="#">
             BastianBV
