@@ -1,7 +1,9 @@
+import style from "./Footer.module.scss";
+
 const Footer = () => {
   return (
-    <footer class="features-footer">
-      <div class="container d-flex flex-column align-items-center">
+    <footer className={style.featuresFooter}>
+      <div className="container d-flex flex-column align-items-center">
         <div>
           <p>
             <a href="https://dev.to/">DEV Community</a> - A constructive and
@@ -30,3 +32,5 @@ const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
