@@ -1,7 +1,8 @@
 import styles from "./PaginaDetalle.module.scss";
-const Body = () => {
+
+const Body = ({ post }) => {
   return (
-    <div class={`container-fluid ${styles.containerInputs}`}>
+    <div className={`container-fluid ${styles.containerInputs}`}>
       <div className={`container ${styles.containerInputs}`}>
         <div className="row d-flex justify-content-center">
           <form className="mt-5 w-50">
