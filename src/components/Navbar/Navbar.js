@@ -4,8 +4,10 @@ import Profile from "./Profile/Profile";
 import Searcher from "./Searcher/Searcher";
 import Search from "./SearchMovile/Search";
 import styles from "../Navbar/Navbar.module.scss";
-import devto from "../Navbar/images/Devto.png";
 import Notifications from "./Notifications/Notifications";
+import MenuButton from "./Menu/MenuButton";
+import DevtoIcon from "./DevToIcon/DevtoIcon";
+import MenuCloseButton from "./Menu/MenuCloseButton";
 const Navbar = () => {
   return (
     <div>
@@ -14,10 +16,9 @@ const Navbar = () => {
           <div
             className={`container-fluid d-flex justify-content-md-between ${styles.containerNav}`}
           >
-            <div className="d-flex ">
-              <a href="/index.html">
-                <img src={devto} alt="img" />
-              </a>
+            <div className="d-flex aling-items-center ">
+              <MenuButton />
+              <DevtoIcon />
               <Searcher />
             </div>
 
@@ -35,13 +36,7 @@ const Navbar = () => {
               aria-labelledby="offcanvasNavbarLabel"
             >
               <div className="offcanvas-header">
-                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">DEV Community</h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                ></button>
+                <MenuCloseButton />
               </div>
               <div className="offcanvas-body">
                 <Menu />
