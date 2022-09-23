@@ -24,8 +24,8 @@ const CardCentralBody = () => {
                     </p>
                 </div>
 
-                <div>
-                    <img src={likeLogo} /> 6 likes
+                <div className={`pt-2 ${style.conteinerReactions}`}>
+                    <img className={style.pointer} src={likeLogo} /> 6 likes
                     <img src={commentLogo} />Reply
                 </div>
             </div>
