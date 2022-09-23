@@ -6,7 +6,7 @@ const Faq = () => {
     <div>
       <li className="nav-item d-flex align-items-center justify-content-start">
         <img src={faqImage} alt="" />{" "}
-        <a className="nav-link active" aria-current="page" href="#">
+        <a className="nav-link active" aria-current="page">
           FAQ
         </a>
       </li>

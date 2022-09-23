@@ -6,8 +6,8 @@ const ReadingList = () => {
     <div>
       {" "}
       <li className="nav-item d-flex align-items-center justify-content-start">
-        <img src={listImage} alt="image" />
-        <a className="nav-link active" aria-current="page" href="#">
+        <img src={listImage} alt="img" />
+        <a className="nav-link active" aria-current="page">
           Reading List
         </a>
       </li>

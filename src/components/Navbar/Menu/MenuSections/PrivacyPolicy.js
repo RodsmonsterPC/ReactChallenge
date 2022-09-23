@@ -5,8 +5,8 @@ const PrivacyPolicy = () => {
   return (
     <div>
       <li className="nav-item d-flex align-items-center justify-content-start">
-        <img src={policyImage} alt="image" />
-        <a className="nav-link active" aria-current="page" href="#">
+        <img src={policyImage} alt="img" />
+        <a className="nav-link active" aria-current="page">
           Privacy Policy
         </a>
       </li>

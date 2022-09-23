@@ -7,7 +7,7 @@ const Search = () => {
         <img
           className="m-3 p-1 d-md-none"
           src={searchIcon}
-          alt="image"
+          alt="img"
         />
       </a>
     </div>
