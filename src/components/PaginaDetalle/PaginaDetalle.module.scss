@@ -51,13 +51,10 @@
         background-color: rgb(158, 158, 158);
    
 }
-.container-nav{
+.containerNav{
     max-width: 1200px !important;
 }
-.contenedorPost{
-    
-    background-color: #FFFFFF;
-}
+
 
 #editor{
    
@@ -126,15 +123,15 @@
        }
   }
 
-  .btn-close{
+  .btnClose{
     display:none;
   }
   @media (min-width :768px){
-    .btn-close{
+    .btnClose{
         display:flex;
        }
   }
- .post_body_input{
+ .postBodyInput{
     border:0;
     
  }
