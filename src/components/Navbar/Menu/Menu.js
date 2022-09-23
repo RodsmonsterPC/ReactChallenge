@@ -20,19 +20,10 @@ import Twitch from "./MenuSections/Twitch"
 import Twitter from "./MenuSections/Twitter"
 
 
-
+ 
 const Menu = () => {
   return (
     <div>
-      <button
-        className="navbar-toggler d-md-none border border-light"
-        type=" button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbar"
-        aria-controls="offcanvasNavbar"
-      >
-        <span className="navbar-toggler-icon d-flex align-items-center"></span>
-      </button>
       <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
         <Home />
         <ReadingList />
