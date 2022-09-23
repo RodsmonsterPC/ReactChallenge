@@ -1,3 +1,8 @@
+
+import AsideRight from "./components/AsideRight2/AsideRight";
+import AsideLeft from "./components/AsideLeft2/AsideLeft";
+import Footer from "./components/Footer/Footer";
+import Navbar from './components/Navbar/Navbar';
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import { IdContextProvider } from "./components/context/idContext";
 import EditPost from "./Pages/EditPost";
@@ -17,6 +22,7 @@ function App() {
         </Routes>
       </IdContextProvider>
     </BrowserRouter>
+
   );
 }
 
