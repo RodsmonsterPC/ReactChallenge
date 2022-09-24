@@ -2,7 +2,7 @@ import React from "react";
 
 const MenuButton = () => {
   return (
-    <div>
+    <div className="d-flex justify-content-around">
       <button
         className="d-inline-block d-md-none navbar-toggler btn-hamburger"
         type="button"
