@@ -1,0 +1,25 @@
+.card__container{
+    border: solid 1px #cecece;
+    background-color: white;
+    border-radius: 10px
+}
+
+.card__user__img__avatar{
+    border: solid 1px #cecece;
+    height: 50px !important
+   
+}
+
+.card__content{
+    display:flex;
+    flex-direction: row;
+}
+
+.small_icon{
+    height: 20px
+}
+
+.card__down-buttons{
+    display: flex;
+    justify-content: space-between;
+}
