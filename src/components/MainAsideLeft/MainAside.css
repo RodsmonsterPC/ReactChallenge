@@ -5,14 +5,3 @@
 .mainAside__small_icon{
     height: 20px;
 }
-
-.smallIcon:hover{
-    background-color: #e2e3f3;
-}
-
-.tag__item{
-    background-color: white;
-}
-.tag_item:hover{
-    background-color: #e2e3f3;
-}
