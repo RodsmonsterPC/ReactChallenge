@@ -1,0 +1,14 @@
+.button__transparent{
+
+}
+
+.button__transparent:hover{
+    background-color: #e2e4f3 !important;
+    border-radius: 5px;
+    color: #2d3ab0 !important;
+    text-decoration:underline !important;
+}
+
+.small__icon__right-aside{
+    height: 20px;
+}

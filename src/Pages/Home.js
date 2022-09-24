@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import { getPost } from "../Services/post2";
 import { useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar/Navbar';
+import MainAsideLeft from '../components/MainAsideLeft/MainAsideLeft'
 import '../components/Home/Home.css'
+
+
 
 
 const Home = () => {
@@ -24,21 +31,27 @@ const Home = () => {
   };
   return (
 
-    <>
-    <Navbar/>
-
-    <div className="container main__container">
-      <div className="row">
-        <div className="col-3">
+    <div className="main__div">
+      <Navbar/>
+      
+    <div className="container">
+      <div className="row container__content">
+        <div className="col-3 mt-4">
+          <MainAsideLeft/>
         </div>
-        <div className="col-6">
+        <div className="col-6 mt-4">
+          CENTER CONTAINTER
         </div>
-        <div className="col-3">
-        </div>  
+        <div className="col-3 mt-4">
+          RIGHT CONTAINER
+        </div>
       </div>
-
-
     </div>
+  
+
+
+
+
 
 
 
@@ -54,7 +67,8 @@ const Home = () => {
         );
       })}
     </div>
-    </>
+  
+  </div>
 
   );
 };
