@@ -8,11 +8,8 @@ import LateralButtonNoImage from './LateralButtonNoImage';
 import "./MainAside.css";
 
 const MainAsideLeft = () => {
-    console.log(MainButtons)
-
   return (
     <>
-   
             {
             MainButtons.map((btnData)=>{
             return(
@@ -39,12 +36,7 @@ const MainAsideLeft = () => {
              
             })
             }
-
- 
-
-
     </>
-
   )
 }
 

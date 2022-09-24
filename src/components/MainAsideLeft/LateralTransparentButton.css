@@ -1,7 +1,3 @@
-.button__transparent{
-
-}
-
 .button__transparent:hover{
     background-color: #e2e4f3 !important;
     border-radius: 5px;

@@ -16,7 +16,6 @@ import code_of_conduct from '../components/MainAsideLeft/images/code_of_conduct.
 import privacy_policy from '../components/MainAsideLeft/images/privacy_policy.png'
 import terms_of_use from '../components/MainAsideLeft/images/terms_of_use.png'
 
-
 export const MainButtons=[
     {
         button_name: "Home",
