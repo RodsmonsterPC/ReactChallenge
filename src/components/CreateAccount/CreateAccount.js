@@ -20,6 +20,9 @@ const CreateAccount=()=>{
                     </div>
                     
                     <br/>
+
+                    <span>Already hace an account? <a href="/enter" className={`registerBtn  ms-4 mt-3 pt-3 ${style.decorationOff}`}>Login</a></span>
+
                     
                 </div>
 

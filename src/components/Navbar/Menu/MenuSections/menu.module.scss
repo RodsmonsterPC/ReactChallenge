@@ -1,0 +1,19 @@
+$hoverColor: #e2e3f3;
+
+.smallIcon{
+    background-color: transparent;
+    height: 20px;
+    width:20px;
+}
+.smallIcon:hover{
+    background-color: $hoverColor;
+}
+
+#about{
+    width:24px;
+    height: 24px;
+}
+.guides{
+    width:24px;
+    height: 24px;
+}
