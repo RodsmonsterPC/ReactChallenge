@@ -1,0 +1,22 @@
+.linkTitle{
+    text-decoration: none;
+    color:black;
+ }
+ .asideRight{
+    padding-left: 10px;
+}
+.cardBody{
+    padding: 16px;
+}
+.linkDev{
+    &:hover{
+        cursor: pointer;
+        color:#2f3ab2
+    }
+}
+
+.notify{
+    border-radius: 20%;
+    background-color: orange;
+    border: 1px solid orange;
+}
