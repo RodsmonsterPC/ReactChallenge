@@ -33,3 +33,6 @@ export const updtaePost = async (id, data) => {
 };
 
 export const deletePost = async () => {};
+
+
+
