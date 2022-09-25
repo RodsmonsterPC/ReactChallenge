@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import AsideLeft from "../components/AsideLeft2/AsideLeft";
 import AsideRight from "../components/AsideRight2/AsideRight";
-import IdContext from "../components/context/idContext";
+// import IdContext from "../components/context/idContext";
 import Footer from "../components/Footer/Footer";
 import { getPostId } from "../Services/post2";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const DetailPost = () => {
-  const { id } = useContext(IdContext);
-  console.log(id);
+  // console.log(id);
 
   const params = useParams();
   const [post, setPost] = useState();
@@ -25,6 +24,7 @@ const DetailPost = () => {
     <div>
       <AsideLeft />
       <div>{post.title}</div>
+      <Link to={`/editpost/${params.postId}`}>Editar</Link>
       <AsideRight />
       <Footer />
     </div>
