@@ -9,7 +9,10 @@ import { Link, useParams } from "react-router-dom";
 const DetailPost = () => {
   // console.log(id);
 
+  // const { switchLike, getLike, likes } = useContext(LikeContext);
+  // const liked = getLike(id);
   const params = useParams();
+
   const [post, setPost] = useState();
   useEffect(() => {
     getPostId(params.postId).then((post) => {
