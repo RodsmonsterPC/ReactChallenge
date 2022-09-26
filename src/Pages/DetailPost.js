@@ -29,6 +29,7 @@ console.log('post', post)
 
     <>
     <div className={`d-flex container-fluid ${styles.containerPost}`}>
+      {/* <Navbar */}
     <AsideLeft />
      <Card style={{ width: '1000px' }}>
       <Card.Img variant="top" src={`${post.urlImage}`} />
