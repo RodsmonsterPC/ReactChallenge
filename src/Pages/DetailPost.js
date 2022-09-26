@@ -11,7 +11,7 @@ const DetailPost = () => {
 
   // const { switchLike, getLike, likes } = useContext(LikeContext);
   // const liked = getLike(id);
-  // const params = useParams();
+  const params = useParams();
 
   const [post, setPost] = useState();
   useEffect(() => {
