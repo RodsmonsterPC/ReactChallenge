@@ -1,27 +1,28 @@
-// import { useContext, useEffect, useState } from "react";
-// import IdContext from "../components/context/idContext";
-import Body from "../components/PaginaDetalle/Body";
-import Navbar from "../components/PaginaDetalle/Navbar";
-// import { getPostId } from "../Services/post";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import BodyCreate from "../components/CreatePost/BodyCreate";
+import NavbarCreate from "../components/CreatePost/NavbarCreate";
+
+import { getPostId } from "../Services/post2";
 
 const EditPost = () => {
-  //   const { id } = useContext(IdContext);
+  const params = useParams();
 
-  //   const [post, setPost] = useState();
-  //   useEffect(() => {
-  //     getPostId(id).then((post) => {
-  //       setPost(post);
-  //     });
-  //   }, []);
+  const [post, setPost] = useState();
+  useEffect(() => {
+    getPostId(params.postId).then((post) => {
+      setPost(post);
+    });
+  }, []);
 
-  //   if (!post) {
-  //     return <div>Cargando...</div>;
-  //   }
+  if (!post) {
+    return <div>Cargando...</div>;
+  }
 
   return (
     <div>
-      <Navbar />
-      <Body />
+      <NavbarCreate />
+      <BodyCreate post={post} />
     </div>
   );
 };

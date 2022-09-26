@@ -1,17 +1,20 @@
 import { useContext, useEffect, useState } from "react";
 import AsideLeft from "../components/AsideLeft2/AsideLeft";
 import AsideRight from "../components/AsideRight2/AsideRight";
-import IdContext from "../components/context/idContext";
+// import IdContext from "../components/context/idContext";
 import Footer from "../components/Footer/Footer";
 import { getPostId } from "../Services/post2";
-import { useParams } from "react-router-dom";
 import styles from "../Pages/styles/DetailPost.module.scss"
 import Card from 'react-bootstrap/Card';
-const DetailPost = () => {
-  const { id } = useContext(IdContext);
-  console.log(id);
+import { Link, useParams } from "react-router-dom";
 
+const DetailPost = () => {
+  // console.log(id);
+
+  // const { switchLike, getLike, likes } = useContext(LikeContext);
+  // const liked = getLike(id);
   const params = useParams();
+
   const [post, setPost] = useState();
   useEffect(() => {
     getPostId(params.postId).then((post) => {
@@ -23,6 +26,7 @@ console.log('post', post)
     return <div>Cargando...</div>;
   }
   return (
+
     <>
     <div className={`d-flex container-fluid ${styles.containerPost}`}>
     <AsideLeft />

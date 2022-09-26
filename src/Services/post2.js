@@ -20,3 +20,19 @@ export const postPost = async (data) => {
   const responseData = await response.json();
   return responseData.user;
 };
+
+export const updtaePost = async (id, data) => {
+  const response = await fetch(`http://localhost:8080/post/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+
+  const responseData = await response.json();
+  return responseData.user;
+};
+
+export const deletePost = async () => {};
+
+
+
