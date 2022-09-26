@@ -11,6 +11,8 @@ import SecondaryPosts from "../components/MainCentralContent/SecondaryPosts";
 import AsideRight from "../components/MainAsideRight/AsideRight";
 
 const Home = () => {
+  const token = localStorage.getItem("token");
+
   const navigate = useNavigate();
 
   const [posts, setPosts] = useState();
@@ -29,7 +31,7 @@ const Home = () => {
   };
   return (
     <div className="main__div">
-      <Navbar />
+      <Navbar token={token} />
 
       <div className="container">
         <div className="row container__content">

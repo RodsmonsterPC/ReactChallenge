@@ -1,6 +1,7 @@
 import styles from "./CreatePost.module.scss";
 import Devto from "./Images/dev_to_icon_136699.png";
-const NavbarCreate = () => {
+
+const NavbarCreate = ({ user }) => {
   return (
     <header className={styles.headerNav}>
       <nav className={`${styles.navbar} fixed-top border-bottom p-0 row`}>

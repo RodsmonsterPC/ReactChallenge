@@ -1,3 +1,74 @@
 .decorationOff{
     text-decoration: none;
 }
+.orderButtons{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.styleBodyLogin{
+    background-color: #f5f5f5;
+}
+
+.sectionCentral{
+    width: 33.33%;
+    margin-left: 33.33%;
+    
+}
+
+.editionInputInf{
+    width: 85%;
+    border-radius: 9px;
+    border-color: #D4D4D4;
+}
+
+@media (max-width:425px) {
+    .sectionCentral{
+        margin-left: 0;
+        width: auto;
+    }
+    .titleEdition{
+        font-size: 24px;
+    }
+    .editionInputInf{
+        width: 95%;
+        border-radius: 9px;
+        border-color: #D4D4D4;
+    }
+    .editionBtn{
+        width: 95%;
+    }
+}
+
+@media (min-width:426px) and (max-width:1023px) {
+    .sectionCentral{
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .editionInputInf{
+        width: 95%;
+        border-radius: 9px;
+        border-color: #D4D4D4;
+    }
+
+    .editionBtn{
+        width: 95%;
+    }
+
+}
+
+.titleEdition{
+    font-size: 30px;
+    line-height: 1.25;
+}
+
+.subtitleEdition{
+    text-decoration: none;
+}
+
+.textInput{
+    margin-left: 10%;
+    text-align: start;
+}

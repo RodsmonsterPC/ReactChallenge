@@ -4,9 +4,7 @@ import { postPost, updtaePost } from "../../Services/post2";
 import { useNavigate } from "react-router-dom";
 import QuillEditor from "./Toolbar/Toolbar";
 
-
-
-const BodyCreate = ({ post }) => {
+const BodyCreate = ({ post, token }) => {
   console.log(post);
   const [image, setImage] = useState(post?.urlImage);
   const [title, setTitle] = useState(post?.title);
@@ -16,40 +14,42 @@ const BodyCreate = ({ post }) => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
+    console.log("data", formData);
     const body = {
       urlImage: image,
       title: title,
       tags: tags,
-      body: formData,
+      body: formData.postBody,
     };
     try {
       if (post?._id) {
         const updatedPost = await updtaePost(post._id, body);
         navigate(`/detailpost/${post._id}`);
       } else {
-        const newPost = await postPost(body);
+        const newPost = await postPost(body, token);
         navigate("/");
       }
     } catch {
       alert("Error al guardar datos");
-    
-  }
-};
+    }
+  };
 
-const [formData, setFormData] = useState({
-  postBody: "",
-});
-const handleQuill = (e) => {
-setFormData({
-  ...formData,
-    postBody: e,
-    postTimeToRead: Math.ceil(e.length / 150),
+  const [formData, setFormData] = useState({
+    postBody: "",
   });
-};
+  const handleQuill = (e) => {
+    setFormData({
+      ...formData,
+      postBody: e,
+      postTimeToRead: Math.ceil(e.length / 150),
+    });
+  };
   return (
     <div>
       <div className={`container-fluid ${styles.containerInputs}`}>
-        <div className={`container row d-flex justify-content-center ${styles.containerGeneral}`}>
+        <div
+          className={`container row d-flex justify-content-center ${styles.containerGeneral}`}
+        >
           <div className={`${styles.alertHolders}`}></div>
           <div className={`${styles.containerPost}`}>
             <div id="containerInputs">
@@ -88,10 +88,10 @@ setFormData({
                 />
               </div>
               <QuillEditor
-               name="postBody"
-               value={formData.postBody}
-               placeholder="Write your post content here.."
-               onChange={handleQuill}
+                name="postBody"
+                value={formData.postBody}
+                placeholder="Write your post content here.."
+                onChange={handleQuill}
               />
             </div>
 

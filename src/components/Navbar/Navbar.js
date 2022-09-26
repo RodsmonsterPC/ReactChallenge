@@ -1,4 +1,4 @@
-import CreatePostButton from "./CreatePostButton/CreatePostButton";
+import Button from "./CreatePostButton/CreatePostButton";
 import Menu from "./Menu/Menu";
 import Profile from "./Profile/Profile";
 import Searcher from "./Searcher/Searcher";
@@ -8,7 +8,8 @@ import Notifications from "./Notifications/Notifications";
 import MenuButton from "./Menu/MenuButton";
 import DevtoIcon from "./DevToIcon/DevtoIcon";
 import MenuCloseButton from "./Menu/MenuCloseButton";
-const Navbar = () => {
+
+const Navbar = ({ token, isLogginIn }) => {
   return (
     <div>
       <header>
@@ -24,9 +25,15 @@ const Navbar = () => {
 
             <div className="d-flex align-items-center">
               <Search />
-              <CreatePostButton />
-              <Notifications />
-              <Profile />
+              {token ? (
+                <>
+                  <Button link="CreatePost" text="Create Post" />
+                  <Notifications />
+                  <Profile />
+                </>
+              ) : (
+                !isLogginIn && <Button link="enter" text="Log in" />
+              )}
             </div>
 
             <div
