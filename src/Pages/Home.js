@@ -35,10 +35,10 @@ const Home = () => {
 
       <div className="container">
         <div className="row container__content">
-          <div className="col-3 mt-4">
+          <div className="col-md-3 mt-4 d-none d-md-block">
             <MainAsideLeft />
           </div>
-          <div className="col-6 mt-4">
+          <div className="col d-block mt-4">
             <div>
               {posts.map((post, index) => {
                 if (index === 0) {
@@ -57,7 +57,7 @@ const Home = () => {
               })}
             </div>
           </div>
-          <div className="col-3 mt-4">
+          <div className="col-lg-3 mt-4 d-none d-lg-block">
             <AsideRight />
           </div>
         </div>
