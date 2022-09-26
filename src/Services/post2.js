@@ -10,10 +10,13 @@ export const getPostId = async (id) => {
   return data.post;
 };
 
-export const postPost = async (data) => {
+export const postPost = async (data, token) => {
   const response = await fetch(`http://localhost:8080/post`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
     body: JSON.stringify(data),
   });
 
@@ -33,6 +36,3 @@ export const updtaePost = async (id, data) => {
 };
 
 export const deletePost = async () => {};
-
-
-
