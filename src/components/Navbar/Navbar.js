@@ -16,7 +16,7 @@ const Navbar = () => {
           <div
             className={`container-fluid d-flex justify-content-md-between ${styles.containerNav}`}
           >
-            <div className="d-flex aling-items-center ">
+            <div className="d-flex">
               <MenuButton />
               <DevtoIcon />
               <Searcher />
@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className="offcanvas offcanvas-start"
+              className={`offcanvas offcanvas-start ${styles.dropDownItems}`}
               tabindex="-1"
               id="offcanvasNavbar"
               aria-labelledby="offcanvasNavbarLabel"

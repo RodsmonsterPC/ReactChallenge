@@ -5,8 +5,8 @@ const NavbarCreate = () => {
     <header className={styles.headerNav}>
       <nav className={`${styles.navbar} fixed-top border-bottom p-0 row`}>
         <div className={`container-fluid d-flex ${styles.containerNav}`}>
-          <div className="d-flex align-items-center justify-content-md-start">
-            <a href="/index.html" className={`${styles.devTo}`}>
+          <div className="container-fluid d-flex align-items-center justify-content-md-start">
+            <a href="/" className={`${styles.devTo}`}>
               <img className="" src={Devto} alt="" />
             </a>
             <p className={`${styles.textCreate}`}>Create Post</p>

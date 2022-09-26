@@ -3,7 +3,7 @@ import style from "./Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={style.featuresFooter}>
-      <div className="container d-flex flex-column align-items-center">
+      <div className="container-fluid d-flex flex-column align-items-center">
         <div>
           <p>
             <a href="https://dev.to/">DEV Community</a> - A constructive and

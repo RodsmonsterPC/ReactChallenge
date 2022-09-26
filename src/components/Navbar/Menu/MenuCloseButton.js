@@ -1,9 +1,9 @@
 import React from "react";
-
+import styles from './Menu.module.scss'
 const MenuCloseButton = () => {
   return (
-    <div>
-      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+    <div className={`${styles.closeButton}`}>
+      <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
         DEV Community
       </h5>
       <button

@@ -2,6 +2,9 @@ import { useState } from "react";
 import styles from "./CreatePost.module.scss";
 import { postPost, updtaePost } from "../../Services/post2";
 import { useNavigate } from "react-router-dom";
+import QuillEditor from "./Toolbar/Toolbar";
+
+
 
 const BodyCreate = ({ post }) => {
   console.log(post);
@@ -17,7 +20,7 @@ const BodyCreate = ({ post }) => {
       urlImage: image,
       title: title,
       tags: tags,
-      body: text,
+      body: formData,
     };
     try {
       if (post?._id) {
@@ -29,15 +32,27 @@ const BodyCreate = ({ post }) => {
       }
     } catch {
       alert("Error al guardar datos");
-    }
-  };
+    
+  }
+};
+
+const [formData, setFormData] = useState({
+  postBody: "",
+});
+const handleQuill = (e) => {
+setFormData({
+  ...formData,
+    postBody: e,
+    postTimeToRead: Math.ceil(e.length / 150),
+  });
+};
   return (
     <div>
       <div className={`container-fluid ${styles.containerInputs}`}>
-        <div className="row d-flex justify-content-center">
-          <div className="alertHolder"></div>
+        <div className={`container row d-flex justify-content-center ${styles.containerGeneral}`}>
+          <div className={`${styles.alertHolders}`}></div>
           <div className={`${styles.containerPost}`}>
-            <div className="" id="containerInputs">
+            <div id="containerInputs">
               <div className={`${styles.addImage}`}>
                 <input
                   value={image}
@@ -72,15 +87,25 @@ const BodyCreate = ({ post }) => {
                   placeholder="Add up to 4 tags..."
                 />
               </div>
+              <QuillEditor
+               name="postBody"
+               value={formData.postBody}
+               placeholder="Write your post content here.."
+               onChange={handleQuill}
+              />
             </div>
+
+            {/* <textarea
+
 
             <textarea
               value={text}
+
               onChange={(e) => setText(e.target.value)}
               id="editor"
               className={`${styles.postBodyInput}`}
               placeholder="Write your post content here..."
-            ></textarea>
+            ></textarea> */}
           </div>
         </div>
       </div>
