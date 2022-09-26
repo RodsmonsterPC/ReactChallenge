@@ -23,3 +23,12 @@
     display: flex;
     justify-content: space-between;
 }
+
+.down-link{
+    text-decoration: none;
+    color: #61575C;
+    padding: 0 !important;
+}
+.down-link:hover{
+    color:  #413f40;
+}
