@@ -6,7 +6,9 @@ import Footer from "../components/Footer/Footer";
 import { getPostId } from "../Services/post2";
 import styles from "../Pages/styles/DetailPost.module.scss"
 import Card from 'react-bootstrap/Card';
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import EditButton from "../components/PaginaDetalle/Buttons/EditButton";
+import EraseButton from "../components/PaginaDetalle/Buttons/EraseButton";
 
 const DetailPost = () => {
   // console.log(id);
@@ -33,6 +35,7 @@ console.log('post', post)
     <AsideLeft />
      <Card style={{ width: '1000px' }}>
       <Card.Img variant="top" src={`${post.urlImage}`} />
+      <EditButton/> <EraseButton/>
       <Card.Body>
         <Card.Title>{post.title}</Card.Title>
         <Card.Text>
