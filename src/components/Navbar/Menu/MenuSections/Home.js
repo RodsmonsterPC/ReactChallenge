@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <li className="nav-item d-flex align-items-center justify-content-start">
         <img src={homeImage} alt="" />{" "}
-        <Link className="nav-link active" aria-current="page" to="index.hmtl" >
+        <Link className="nav-link active" aria-current="page" to="/" >
           Home
         </Link>
       </li>

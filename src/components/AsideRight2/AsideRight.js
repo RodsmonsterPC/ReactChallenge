@@ -2,7 +2,8 @@ import styles from "./AsideRight.module.scss";
 
 const AsideRight = () => {
   return (
-    <aside className="col-md-4 col-xs-12 col-xl-4  justify-content-end  order-3">
+    <div className={`col-md-4 col-xs-12 col-xl-4  justify-content-end  order-3 ${styles.containerFooter}`}>
+    <aside >
       <div className="card">
         <span
           className={`${styles.border2} border border-dark bg-black rounded-top`}
@@ -68,6 +69,7 @@ const AsideRight = () => {
         </ul>
       </div>
     </aside>
+    </div>
   );
 };
 

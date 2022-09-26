@@ -15,7 +15,7 @@ const Profile = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="index.html">BastianBV</Dropdown.Item>
+        <Dropdown.Item href="/">BastianBV</Dropdown.Item>
         <Dropdown.Item href="#/action-2">Dashboard</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Create Post</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Reading list</Dropdown.Item>

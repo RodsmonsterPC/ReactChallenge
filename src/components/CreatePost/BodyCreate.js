@@ -2,12 +2,14 @@ import { useState } from "react";
 import styles from "./CreatePost.module.scss";
 import { postPost } from "../../Services/post2";
 import { useNavigate } from "react-router-dom";
+import QuillEditor from "./Toolbar/Toolbar";
+
 
 const BodyCreate = () => {
   const [image, setImage] = useState();
   const [title, setTitle] = useState();
   const [tags, setTags] = useState();
-  const [text, setText] = useState();
+  // const [text, setText] = useState();
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
@@ -15,22 +17,34 @@ const BodyCreate = () => {
       urlImage: image,
       title: title,
       tags: tags,
-      body: text,
+      body: formData,
     };
     try {
       const newPost = await postPost(body);
       navigate("/");
     } catch {
       alert("Error al guardar datos");
-    }
-  };
+    
+  }
+};
+
+const [formData, setFormData] = useState({
+  postBody: "",
+});
+const handleQuill = (e) => {
+setFormData({
+  ...formData,
+    postBody: e,
+    postTimeToRead: Math.ceil(e.length / 150),
+  });
+};
   return (
     <div>
       <div className={`container-fluid ${styles.containerInputs}`}>
-        <div className="row d-flex justify-content-center">
-          <div className="alertHolder"></div>
+        <div className={`container row d-flex justify-content-center ${styles.containerGeneral}`}>
+          <div className={`${styles.alertHolders}`}></div>
           <div className={`${styles.containerPost}`}>
-            <div className="" id="containerInputs">
+            <div id="containerInputs">
               <div className={`${styles.addImage}`}>
                 <input
                   onChange={(e) => setImage(e.target.value)}
@@ -62,14 +76,19 @@ const BodyCreate = () => {
                   placeholder="Add up to 4 tags..."
                 />
               </div>
+              <QuillEditor
+               name="postBody"
+               value={formData.postBody}
+               placeholder="Write your post content here.."
+               onChange={handleQuill}
+              />
             </div>
-
-            <textarea
+            {/* <textarea
               onChange={(e) => setText(e.target.value)}
               id="editor"
               className={`${styles.postBodyInput}`}
               placeholder="Write your post content here..."
-            ></textarea>
+            ></textarea> */}
           </div>
         </div>
       </div>

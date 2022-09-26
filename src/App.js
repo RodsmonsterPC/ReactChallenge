@@ -13,9 +13,6 @@ import CreatePost from "./Pages/CreatePost";
 function App() {
   return (
     <BrowserRouter>
-          <Navbar/>
-          <AsideLeft/>
-          <AsideRight/>
       <IdContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -24,7 +21,6 @@ function App() {
           <Route path="/createpost" element={<CreatePost />} />
         </Routes>
       </IdContextProvider>
-      <Footer/>
     </BrowserRouter>
 
   );

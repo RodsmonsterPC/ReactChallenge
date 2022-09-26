@@ -4,7 +4,7 @@ import devto from "../images/Devto.png";
 const DevtoIcon = () => {
   return (
     <div>
-      <a href="/index.html">
+      <a href="/"> 
         <img src={devto} alt="img" />
       </a>
     </div>

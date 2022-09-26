@@ -1,14 +1,24 @@
 .containerInputs{
-    padding:12px;
-    background-color: #FFFFFF;
+    padding-top:50px;
+    padding-left:80px;
+    // background-color: #FFFFFF;
     margin-top: 0% !important;
     margin-bottom: 0% !important;
     display: flex;
-    justify-content: center;
+    justify-content:start;
+    width: 871.19px;
+    height: 631px;
+}
+.containerGeneral{
+padding-left:50px;
 }
 .containerPost{
     
     background-color: #FFFFFF;
+    height: 226px;
+}
+.alertHolders{
+  display:contents;
 }
 .addImage{
     margin-bottom:20px;
@@ -42,11 +52,14 @@
 
   .postBodyInput{
     background-color:#FFFFFF ;
-  }
-  .postBodyInput{
     border:0;
-    
- }
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 64px;
+    padding-right: 64px;
+    width: 678px;
+    height: 400px;
+  }
 
   .containerButtons{
     position:fixed;
@@ -125,5 +138,5 @@
       }
 
 .headerNav{
-    margin-bottom: 100px;
+    margin-bottom: 10px;
 }
