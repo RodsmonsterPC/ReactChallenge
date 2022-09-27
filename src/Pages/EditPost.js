@@ -7,7 +7,7 @@ import { getPostId } from "../Services/post2";
 
 const EditPost = () => {
   const params = useParams();
-
+  const token = localStorage.getItem("token");
   const [post, setPost] = useState();
   useEffect(() => {
     getPostId(params.postId).then((post) => {
@@ -22,7 +22,7 @@ const EditPost = () => {
   return (
     <div>
       <NavbarCreate />
-      <BodyCreate post={post} />
+      <BodyCreate post={post} token={token} />
     </div>
   );
 };

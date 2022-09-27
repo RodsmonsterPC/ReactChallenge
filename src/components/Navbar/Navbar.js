@@ -32,7 +32,12 @@ const Navbar = ({ token, isLogginIn }) => {
                   <Profile />
                 </>
               ) : (
-                !isLogginIn && <Button link="enter" text="Log in" />
+                !isLogginIn && (
+                  <div>
+                    <Button link="enter" text="Log in" />{" "}
+                    <Button link="newUser" text="Create Account" />
+                  </div>
+                )
               )}
             </div>
 

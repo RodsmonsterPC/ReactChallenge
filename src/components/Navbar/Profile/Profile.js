@@ -1,29 +1,38 @@
-import styles from '../Profile/profile.module.scss'
-import profileimage from '../images/avatar_people_adult_man_icon_159129.png'
-import Dropdown from 'react-bootstrap/Dropdown';
+import styles from "../Profile/profile.module.scss";
+import profileimage from "../images/avatar_people_adult_man_icon_159129.png";
+import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
 const Profile = () => {
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    localStorage.clear();
+    navigate("/");
+  };
   return (
     <>
-    <div>
-    <Dropdown>
-      <Dropdown.Toggle variant="" id="dropdown-basic">
-        <img
-          className="border border-dark rounded-circle "
-          src={profileimage}
-          alt="image"
-        />
-      </Dropdown.Toggle>
+      <div>
+        <Dropdown>
+          <Dropdown.Toggle variant="" id="dropdown-basic">
+            <img
+              className="border border-dark rounded-circle "
+              src={profileimage}
+              alt="image"
+            />
+          </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        <Dropdown.Item href="/">BastianBV</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Dashboard</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Create Post</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Reading list</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Settings</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Sing Out</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
-    </div>
+          <Dropdown.Menu>
+            <Dropdown.Item href="/">BastianBV</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Dashboard</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Create Post</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Reading list</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Settings</Dropdown.Item>
+            <Dropdown.Item onClick={handleLogOut} href="#/action-3">
+              Sing Out
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </div>
     </>
   );
 };
