@@ -24,15 +24,29 @@ export const postPost = async (data, token) => {
   return responseData.user;
 };
 
-export const updtaePost = async (id, data) => {
+export const updatePost = async (id, data, token) => {
   const response = await fetch(`http://localhost:8080/post/${id}`, {
     method: "PATCH",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
     body: JSON.stringify(data),
   });
 
   const responseData = await response.json();
-  return responseData.user;
+  return responseData.post2Modify;
 };
 
-export const deletePost = async () => {};
+export const erasePost = async (id, token) => {
+  const response = await fetch(`http://localhost:8080/post/${id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  const responseData = await response.json();
+  return responseData;
+};

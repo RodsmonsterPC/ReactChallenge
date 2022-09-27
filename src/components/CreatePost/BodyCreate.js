@@ -1,8 +1,9 @@
 import { useState } from "react";
 import styles from "./CreatePost.module.scss";
-import { postPost, updtaePost } from "../../Services/post2";
+import { erasePost, postPost, updatePost } from "../../Services/post2";
 import { useNavigate } from "react-router-dom";
 import QuillEditor from "./Toolbar/Toolbar";
+import { assertClassProperty } from "@babel/types";
 
 const BodyCreate = ({ post, token }) => {
   console.log(post);
@@ -14,7 +15,6 @@ const BodyCreate = ({ post, token }) => {
   const navigate = useNavigate();
 
   const handleSubmit = async () => {
-    console.log("data", formData);
     const body = {
       urlImage: image,
       title: title,
@@ -23,7 +23,7 @@ const BodyCreate = ({ post, token }) => {
     };
     try {
       if (post?._id) {
-        const updatedPost = await updtaePost(post._id, body);
+        const updatedPost = await updatePost(post._id, body, token);
         navigate(`/detailpost/${post._id}`);
       } else {
         const newPost = await postPost(body, token);
@@ -31,6 +31,17 @@ const BodyCreate = ({ post, token }) => {
       }
     } catch {
       alert("Error al guardar datos");
+    }
+  };
+
+  const handleErase = async () => {
+    const responseDelete = await erasePost(post._id, token);
+
+    if (responseDelete.success) {
+      alert("Borrado con exito");
+      navigate(`/`);
+    } else {
+      alert("Ocurrio un error");
     }
   };
 
@@ -119,6 +130,7 @@ const BodyCreate = ({ post, token }) => {
         </button>
 
         <button
+          onClick={handleErase}
           type="button"
           className={`btn btn-primary ${styles.btnDeletePost} mt-2`}
         >
